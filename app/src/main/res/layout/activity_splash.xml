@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context="com.example.nextlevel.nextlevelgamingesports.SplashActivity">
+
+    <LinearLayout
+        android:id="@+id/logoGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="70dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <ImageView
+                android:id="@+id/logoGlow"
+                android:layout_width="198dp"
+                android:layout_height="101dp"
+                android:layout_gravity="center"
+                android:alpha="0"
+                android:importantForAccessibility="no"
+                android:padding="24dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_shapes_avd" />
+
+            <ImageView
+                android:id="@+id/logoShapes"
+                android:layout_width="150dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center"
+                android:contentDescription="Next Level Gaming &amp; Esports Arena, est 2023"
+                android:src="@drawable/logo_shapes_avd" />
+        </FrameLayout>
+
+        <!-- Row 1: NEXT LEVEL GAMING & -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvNext"
+                style="@style/LogoWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NEXT"
+                android:textColor="@color/nl_white" />
+
+            <TextView
+                android:id="@+id/tvLevel"
+                style="@style/LogoWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:text="LEVEL"
+                android:textColor="@color/nl_lavender" />
+
+            <TextView
+                android:id="@+id/tvGaming"
+                style="@style/LogoWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:text="GAMING"
+                android:textColor="@color/nl_white" />
+
+            <TextView
+                android:id="@+id/tvAmp"
+                style="@style/LogoWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:text="&amp;"
+                android:textColor="@color/nl_green" />
+        </LinearLayout>
+
+        <!-- Row 2: ESPORTS ARENA -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvEsports"
+                style="@style/LogoWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ESPORTS"
+                android:textColor="@color/nl_green" />
+
+            <TextView
+                android:id="@+id/tvArena"
+                style="@style/LogoWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:text="ARENA"
+                android:textColor="@color/nl_lavender" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvEst"
+            style="@style/LogoWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:letterSpacing="0.25"
+            android:text="EST 2023"
+            android:textColor="@color/nl_white"
+            android:textSize="10sp" />
+
+        <!-- Loading bar: lavender track + green fill -->
+        <FrameLayout
+            android:layout_width="74dp"
+            android:layout_height="9dp"
+            android:layout_marginTop="10dp">
+
+            <View
+                android:id="@+id/ruleTrack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/nl_lavender" />
+
+            <View
+                android:id="@+id/ruleFill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/nl_green" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:alpha="0"
+        android:background="@drawable/bg_button"
+        android:stateListAnimator="@null"
+        android:text="Get Started"
+        android:textAllCaps="false"
+        android:textColor="@color/nl_bg_dark"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+</FrameLayout>

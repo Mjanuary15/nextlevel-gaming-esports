@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Layer 1: Outermost feather edge (1% alpha) -->
+    <item
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="32dp" />
+            <solid android:color="#0272EA24" />
+        </shape>
+    </item>
+
+    <!-- Layer 2: 2% alpha -->
+    <item
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="30dp" />
+            <solid android:color="#0572EA24" />
+        </shape>
+    </item>
+
+    <!-- Layer 3: 4% alpha -->
+    <item
+        android:bottom="4dp"
+        android:left="4dp"
+        android:right="4dp"
+        android:top="4dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="28dp" />
+            <solid android:color="#0A72EA24" />
+        </shape>
+    </item>
+
+    <!-- Layer 4: 7% alpha -->
+    <item
+        android:bottom="6dp"
+        android:left="6dp"
+        android:right="6dp"
+        android:top="6dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="26dp" />
+            <solid android:color="#1272EA24" />
+        </shape>
+    </item>
+
+    <!-- Layer 5: 11% alpha -->
+    <item
+        android:bottom="8dp"
+        android:left="8dp"
+        android:right="8dp"
+        android:top="8dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="24dp" />
+            <solid android:color="#1C72EA24" />
+        </shape>
+    </item>
+
+    <!-- Layer 6: 16% alpha -->
+    <item
+        android:bottom="10dp"
+        android:left="10dp"
+        android:right="10dp"
+        android:top="10dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="22dp" />
+            <solid android:color="#2872EA24" />
+        </shape>
+    </item>
+
+    <!-- Layer 7: 22% alpha -->
+    <item
+        android:bottom="12dp"
+        android:left="12dp"
+        android:right="12dp"
+        android:top="12dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp" />
+            <solid android:color="#3872EA24" />
+        </shape>
+    </item>
+
+    <!-- Layer 8: 30% alpha -->
+    <item
+        android:bottom="14dp"
+        android:left="14dp"
+        android:right="14dp"
+        android:top="14dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="18dp" />
+            <solid android:color="#4C72EA24" />
+        </shape>
+    </item>
+
+    <!-- Layer 9: Inner core glow (42% alpha) -->
+    <item
+        android:bottom="16dp"
+        android:left="16dp"
+        android:right="16dp"
+        android:top="16dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <solid android:color="#6B72EA24" />
+        </shape>
+    </item>
+</layer-list>

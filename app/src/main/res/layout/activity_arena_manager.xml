@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nl_bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <TextView
+            style="@style/Nl.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="ARENA CONTROL &amp; FLEET MANAGER"
+            android:textSize="20sp" />
+
+        <TextView
+            style="@style/Nl.Subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Real-Time Pod Diagnostics &amp; Waitlist Management" />
+
+        <!-- Live station matrix -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_panel_dark"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/Nl.SectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LIVE STATION MATRIX"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pod01"
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_pod_in_use"
+                    android:gravity="center"
+                    android:text="POD 01\nIN USE"
+                    android:textColor="@color/nl_green"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/pod05"
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_pod_offline"
+                    android:gravity="center"
+                    android:text="POD 05\nOFFLINE"
+                    android:textColor="@color/nl_red"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/pod06"
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_pod_idle"
+                    android:gravity="center"
+                    android:text="POD 06\nIDLE"
+                    android:textColor="@color/nl_lavender"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRebootPods"
+                style="@style/Nl.Button.Primary"
+                android:layout_marginTop="20dp"
+                android:text="Reboot Selected Pods" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEmergencyShutdown"
+                style="@style/Nl.Button.Secondary"
+                android:layout_marginTop="12dp"
+                android:text="Emergency Shutdown" />
+        </LinearLayout>
+
+        <!-- Revenue & waitlist -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_panel_purple"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/Nl.SectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="DAILY REVENUE &amp; CAPACITY"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvDailyRevenue"
+                style="@style/Nl.Price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_badge_green"
+                android:gravity="center"
+                android:padding="14dp"
+                android:text="R18,450"
+                android:textSize="22sp" />
+
+            <TextView
+                style="@style/Nl.SectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="WALK-IN WAITLIST QUEUE"
+                android:textSize="14sp" />
+
+            <!-- Waitlist Item 1 -->
+            <LinearLayout
+                android:id="@+id/waitlistItem1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_card_dark"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Nl.BodyBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1. Alex_R"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        style="@style/Nl.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Est. Wait: 10 mins • PC Pod" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btnAssignPod"
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_badge_green"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="Assign Pod"
+                    android:textColor="@color/nl_green"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Waitlist Item 2 -->
+            <LinearLayout
+                android:id="@+id/waitlistItem2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_card_dark"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Nl.BodyBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2. Sarah_K"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        style="@style/Nl.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Est. Wait: 25 mins • PS5 Booth" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Nl.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Pending"
+                    android:textColor="@color/nl_lavender"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

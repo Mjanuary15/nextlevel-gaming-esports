@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nl_bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <!-- Header -->
+            <TextView
+                style="@style/Nl.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Secure Checkout"
+                android:textSize="22sp" />
+
+            <TextView
+                style="@style/Nl.Subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Select your preferred payment method" />
+
+            <!-- Total Payable Summary Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_card_green"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/Nl.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Payable (incl. VAT)"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvTotalPayable"
+                        style="@style/Nl.Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="R1,235"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvSavings"
+                    style="@style/Nl.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Saved 5% (R65) with Multi-Booking Discount"
+                    android:textColor="@color/nl_green" />
+            </LinearLayout>
+
+            <!-- Payment Methods Section -->
+            <TextView
+                style="@style/Nl.SectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Payment Options" />
+
+            <RadioGroup
+                android:id="@+id/rgPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbEft"
+                    style="@style/Nl.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_option_row"
+                    android:buttonTint="@color/nl_green"
+                    android:checked="true"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="Instant EFT / Fast Pay"
+                    android:textColor="@color/nl_white"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbCard"
+                    style="@style/Nl.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_option_row"
+                    android:buttonTint="@color/nl_green"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="Credit / Debit Card (Visa &amp; Mastercard)"
+                    android:textColor="@color/nl_white"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbZapper"
+                    style="@style/Nl.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_option_row"
+                    android:buttonTint="@color/nl_green"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="SnapScan / Zapper QR"
+                    android:textColor="@color/nl_white"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPay"
+        style="@style/Nl.Button.Primary"
+        android:layout_margin="@dimen/screen_padding"
+        android:text="Pay R1,235" />
+
+</LinearLayout>

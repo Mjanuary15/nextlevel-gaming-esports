@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nl_bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <!-- Top Back Navigation Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btnBack"
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/ripple_rounded"
+                    android:gravity="center"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="12dp"
+                    android:text="❮ Back"
+                    android:textColor="@color/nl_green"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- Title -->
+            <TextView
+                style="@style/Nl.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Booking Confirmed!"
+                android:textSize="22sp" />
+
+            <TextView
+                style="@style/Nl.Subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Your arena pass is ready. Present QR code at reception" />
+
+            <!-- Profile header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_panel_purple"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_avatar"
+                    android:contentDescription="Profile picture"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_person"
+                    app:tint="@color/nl_white" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvUsername"
+                        style="@style/Nl.BodyBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ShadowNinja_99"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tvTier"
+                        style="@style/Nl.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Gold Tier Member • 1,250 XP"
+                        android:textColor="@color/nl_green" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Upcoming booking Card -->
+            <LinearLayout
+                android:id="@+id/cardUpcoming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_card_green"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/Nl.SectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UPCOMING BOOKING"
+                        android:textColor="@color/nl_green"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvViewPass"
+                        style="@style/Nl.BodyBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:text="View Digital Pass →"
+                        android:textColor="@color/nl_green"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Squad Party Pack &amp; VR Rig"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvUpcomingDate"
+                    style="@style/Nl.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Sat, 17 Oct | 14:00 - 18:00"
+                    android:textColor="@color/nl_lavender" />
+            </LinearLayout>
+
+            <!-- Past bookings Section -->
+            <TextView
+                style="@style/Nl.SectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Past Booking History" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_card_outline"
+                android:gravity="center_vertical"
+                android:minHeight="56dp"
+                android:orientation="horizontal"
+                android:padding="14dp">
+
+                <TextView
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ProGamer Pass (3Hrs)"
+                    android:textSize="14sp" />
+
+                <TextView
+                    style="@style/Nl.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="28 Sep 2026"
+                    android:textColor="@color/nl_lavender" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_card_outline"
+                android:gravity="center_vertical"
+                android:minHeight="56dp"
+                android:orientation="horizontal"
+                android:padding="14dp">
+
+                <TextView
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim Racing Rig (1Hr)"
+                    android:textSize="14sp" />
+
+                <TextView
+                    style="@style/Nl.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 Sep 2026"
+                    android:textColor="@color/nl_lavender" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogOut"
+        style="@style/Nl.Button.Secondary"
+        android:layout_margin="@dimen/screen_padding"
+        android:text="Log Out / Switch Account" />
+
+</LinearLayout>

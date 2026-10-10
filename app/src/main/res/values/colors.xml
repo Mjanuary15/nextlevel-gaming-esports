@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nl_bg">#0E0A24</color>
+    <color name="nl_bg_dark">#080618</color>
+    <color name="nl_card_fill">#1A1340</color>
+    <color name="nl_card_grey">#2A1F63</color>
+    <color name="nl_green">#6BE81F</color>
+    <color name="nl_lavender">#9A8CFF</color>
+    <color name="nl_lavender_soft">#2A1F63</color>
+    <color name="nl_light_grey">#D9D9D9</color>
+    <color name="nl_red">#FF2E88</color>
+    <color name="nl_purple_track">#800080</color>
+    <color name="nl_option_fill">#1A1340</color>
+    <color name="nl_option_stroke">#2A1F63</color>
+    <color name="nl_white">#FFFFFF</color>
+    <color name="nl_black">#0E0A24</color>
+    <color name="nl_hint">#6B5FA8</color>
+    <color name="nl_muted">#B4A9F5</color>
+
+    <color name="nl_gold">#FFFFC24B</color>
+    <color name="nl_grey_caption">#B4A9F5</color>
+    <color name="nl_live_pink">#FF2E88</color>
+    <color name="nl_track_purple">#2A1F63</color>
+    <color name="nl_card_fc27">#1A1340</color>
+    <color name="nl_card_next_session">#1A1340</color>
+    <color name="nl_card_casual">#183322</color>
+    <color name="nl_card_groups">#2B205C</color>
+    <color name="nl_card_schools">#382F18</color>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Gamepad icon. evenOdd fill: the first subpath is the controller body,
+     and the d-pad and two buttons are cut out of it as holes. The colour is
+     white here; your layouts recolour it with app:tint. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M7,6 H17 C19.8,6 22,8.2 22,11 V14.5 C22,16.4 20.6,18 18.8,18 C17.7,18 16.8,17.5 16.2,16.6 L15.3,15.2 C15,14.7 14.5,14.5 14,14.5 H10 C9.5,14.5 9,14.7 8.7,15.2 L7.8,16.6 C7.2,17.5 6.3,18 5.2,18 C3.4,18 2,16.4 2,14.5 V11 C2,8.2 4.2,6 7,6 Z M6.25,8.5 H7.75 V9.75 H9 V11.25 H7.75 V12.5 H6.25 V11.25 H5 V9.75 H6.25 Z M15.5,9.5 a1,1 0 1,0 2,0 a1,1 0 1,0 -2,0 Z M17.5,11.5 a1,1 0 1,0 2,0 a1,1 0 1,0 -2,0 Z" />
+</vector>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nl_bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <!-- Header -->
+            <TextView
+                style="@style/Nl.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Quotation &amp; Booking Request"
+                android:textSize="22sp" />
+
+            <TextView
+                style="@style/Nl.Subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Next Level Gaming &amp; Esports Arena • Calculate total fees and request a booking consultant" />
+
+            <!-- Customer Contact Details Form -->
+            <TextView
+                style="@style/Nl.SectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Customer Details" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_card_outline"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <EditText
+                    android:id="@+id/etName"
+                    style="@style/Nl.Input"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Full Name"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    style="@style/Nl.Input"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Phone Number"
+                    android:inputType="phone" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    style="@style/Nl.Input"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+
+            <!-- Packages & Experiences Selection Checkbox List -->
+            <TextView
+                style="@style/Nl.SectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Select Gaming Packages &amp; Experiences" />
+
+            <TextView
+                style="@style/Nl.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Select 1 or more. 2 = 5% off | 3 = 10% off | 4+ = 15% off"
+                android:textColor="@color/nl_green" />
+
+            <!-- Gaming Packages & Experiences Checkboxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_panel_purple"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gaming Packages (R1,500 each):"
+                    android:textColor="@color/nl_white"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbUltimateGamer"
+                    style="@style/Nl.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:buttonTint="@color/nl_green"
+                    android:paddingStart="8dp"
+                    android:text="Ultimate Gamer Pass — R1,500"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbVipExperience"
+                    style="@style/Nl.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:buttonTint="@color/nl_green"
+                    android:paddingStart="8dp"
+                    android:text="VIP Gaming Experience — R1,500"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbEsportsTraining"
+                    style="@style/Nl.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:buttonTint="@color/nl_green"
+                    android:paddingStart="8dp"
+                    android:text="Esports Training Package — R1,500"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbBirthdayParty"
+                    style="@style/Nl.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:buttonTint="@color/nl_green"
+                    android:paddingStart="8dp"
+                    android:text="Birthday Party Package — R1,500"
+                    android:textSize="13sp" />
+
+                <TextView
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Individual Experiences (R750 each):"
+                    android:textColor="@color/nl_white"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbVrExperience"
+                    style="@style/Nl.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:buttonTint="@color/nl_green"
+                    android:paddingStart="8dp"
+                    android:text="Virtual Reality Experience — R750"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbRacingSim"
+                    style="@style/Nl.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:buttonTint="@color/nl_green"
+                    android:paddingStart="8dp"
+                    android:text="Racing Simulator Challenge — R750"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbEscapeRoom"
+                    style="@style/Nl.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:buttonTint="@color/nl_green"
+                    android:paddingStart="8dp"
+                    android:text="Escape Room Challenge — R750"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Calculator Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCalculateTotal"
+                style="@style/Nl.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:text="Calculate Total Fee"
+                android:textSize="14sp" />
+
+            <!-- Quoted Fee Breakdown Panel -->
+            <LinearLayout
+                android:id="@+id/panelQuoteBreakdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_card_green"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/Nl.SectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Official Quoted Fee Breakdown"
+                    android:textColor="@color/nl_white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvQuotedCustomerInfo"
+                    style="@style/Nl.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/nl_white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvSelectedItemsSummary"
+                    style="@style/Nl.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/nl_option_stroke" />
+
+                <TextView
+                    android:id="@+id/tvQuoteSubtotal"
+                    style="@style/Nl.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subtotal: R0.00"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvQuoteDiscount"
+                    style="@style/Nl.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Discount (0%): -R0.00"
+                    android:textColor="@color/nl_green"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvQuoteVat"
+                    style="@style/Nl.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="VAT (15%): R0.00"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvQuoteFinalTotal"
+                    style="@style/Nl.Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Quoted Total Fee: R0.00"
+                    android:textSize="22sp" />
+
+                <TextView
+                    style="@style/Nl.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="* Note: This is a quoted fee estimate and not a formal invoice."
+                    android:textColor="@color/nl_white"
+                    android:textSize="11sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmitBookingRequest"
+                    style="@style/Nl.Button.Secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Request Booking Consultant Contact"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

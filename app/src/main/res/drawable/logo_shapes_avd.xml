@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="150dp"
+            android:height="53dp"
+            android:viewportWidth="620"
+            android:viewportHeight="220">
+
+            <!-- Ring (white; the logo's dark purple is shown white on purple) -->
+            <path
+                android:name="ring"
+                android:pathData="M110,48.5 a67.5,67.5 0 1,1 0,135 a67.5,67.5 0 1,1 0,-135"
+                android:strokeColor="#FFFFFF"
+                android:strokeWidth="45"
+                android:trimPathEnd="0" />
+
+            <!-- Green bar dropping into the ring -->
+            <group android:name="bar_group" android:translateY="-140">
+                <path
+                    android:name="bar"
+                    android:pathData="M87,4 h46 v104 h-46 z"
+                    android:fillColor="#72EA24"
+                    android:fillAlpha="0" />
+            </group>
+
+            <!-- X arms -->
+            <path
+                android:name="arm1"
+                android:pathData="M234.5,46.5 L372.5,184.5"
+                android:strokeColor="#8F75FF"
+                android:strokeWidth="44"
+                android:trimPathEnd="0" />
+            <path
+                android:name="arm2"
+                android:pathData="M372.5,46.5 L234.5,184.5"
+                android:strokeColor="#8F75FF"
+                android:strokeWidth="44"
+                android:trimPathEnd="0" />
+
+            <!-- Triangle with cut-out (opposite winding = hole) -->
+            <group
+                android:name="tri_group"
+                android:pivotX="494"
+                android:pivotY="193"
+                android:scaleY="0">
+                <path
+                    android:name="tri"
+                    android:pathData="M494,35 L600,193 H388 Z M494,116 L472,149 H516 Z"
+                    android:fillColor="#FFFFFF" />
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <target android:name="ring">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathEnd"
+                android:valueType="floatType"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:startOffset="200"
+                android:duration="900"
+                android:interpolator="@android:interpolator/fast_out_slow_in" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="arm1">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathEnd"
+                android:valueType="floatType"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:startOffset="900"
+                android:duration="450"
+                android:interpolator="@android:interpolator/decelerate_cubic" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="arm2">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathEnd"
+                android:valueType="floatType"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:startOffset="1200"
+                android:duration="450"
+                android:interpolator="@android:interpolator/decelerate_cubic" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="bar_group">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="translateY"
+                android:valueType="floatType"
+                android:valueFrom="-140"
+                android:valueTo="0"
+                android:startOffset="1200"
+                android:duration="500"
+                android:interpolator="@android:interpolator/overshoot" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="bar">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="fillAlpha"
+                android:valueType="floatType"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:startOffset="1200"
+                android:duration="150" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="tri_group">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="scaleY"
+                android:valueType="floatType"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:startOffset="1500"
+                android:duration="550"
+                android:interpolator="@android:interpolator/overshoot" />
+        </aapt:attr>
+    </target>
+</animated-vector>

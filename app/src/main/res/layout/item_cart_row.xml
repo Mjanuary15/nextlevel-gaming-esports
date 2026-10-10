@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/bg_card_outline"
+    android:gravity="center_vertical"
+    android:minHeight="68dp"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/imgCartItem"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_pill_outline"
+        android:contentDescription="Item Thumbnail"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_gamepad" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvItemName"
+            style="@style/Nl.BodyBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pro Gamer Pass"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvItemSubtext"
+            style="@style/Nl.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Gaming Package"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginEnd="6dp">
+
+        <ImageView
+            android:id="@+id/btnMinus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="Decrease quantity"
+            android:focusable="true"
+            android:padding="6dp"
+            android:src="@drawable/ic_remove"
+            app:tint="@color/nl_lavender" />
+
+        <TextView
+            android:id="@+id/tvQuantity"
+            style="@style/Nl.BodyBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="1"
+            android:textColor="@color/nl_green"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/btnPlus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="Increase quantity"
+            android:focusable="true"
+            android:padding="6dp"
+            android:src="@drawable/ic_add"
+            app:tint="@color/nl_green" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvItemPrice"
+        style="@style/Nl.Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="R1,500"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/btnRemove"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="Remove item from cart"
+        android:focusable="true"
+        android:padding="6dp"
+        android:src="@drawable/ic_close"
+        app:tint="@color/nl_lavender" />
+
+</LinearLayout>

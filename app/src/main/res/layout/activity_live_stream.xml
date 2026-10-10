@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nl_bg_dark"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <!-- Title -->
+            <TextView
+                style="@style/Nl.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tournaments &amp; Global Leaderboard"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvActivePool"
+                style="@style/Nl.Badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_badge_green"
+                android:paddingStart="14dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="6dp"
+                android:text="🏆 Active Prize Pool: R50,000"
+                android:textColor="@color/nl_green"
+                android:textSize="12sp" />
+
+            <!-- Brackets Panel -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_panel_dark"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/Nl.SectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="APEX ARENA FINALS - BRACKETS"
+                    android:textSize="13sp" />
+
+                <TextView
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/bg_panel_purple"
+                    android:padding="12dp"
+                    android:text="ShadowNinja_99 (2) vs ViperX (2)"
+                    android:textColor="@color/nl_green"
+                    android:textSize="13sp" />
+
+                <TextView
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_card_outline"
+                    android:padding="12dp"
+                    android:text="CyberGhost (0) vs AlphaOne (2)"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvChampionship"
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_card_green"
+                    android:padding="12dp"
+                    android:text="CHAMPIONSHIP MATCH\nShadowNinja_99 vs AlphaOne"
+                    android:textColor="@color/nl_green"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Season Leaderboard Panel -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_card_green"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/Nl.SectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="SEASON LEADERBOARD"
+                    android:textColor="@color/nl_green"
+                    android:textSize="13sp" />
+
+                <TextView
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_panel_purple"
+                    android:padding="12dp"
+                    android:text="#1 ShadowNinja_99 • 2,850 PTS"
+                    android:textColor="@color/nl_green"
+                    android:textSize="13sp" />
+
+                <TextView
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_card_outline"
+                    android:padding="12dp"
+                    android:text="#2 AlphaOne • 2,620 PTS"
+                    android:textSize="13sp" />
+
+                <TextView
+                    style="@style/Nl.BodyBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_card_outline"
+                    android:padding="12dp"
+                    android:text="#3 ViperX • 2,410 PTS"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegisterNext"
+        style="@style/Nl.Button.Primary"
+        android:layout_margin="@dimen/screen_padding"
+        android:text="Register for Next Tournament" />
+
+</LinearLayout>

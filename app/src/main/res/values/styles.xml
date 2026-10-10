@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Typography Hierarchy -->
+    <style name="Nl.Header" parent="">
+        <item name="android:textColor">@color/nl_white</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="Nl.Title" parent="">
+        <item name="android:textColor">@color/nl_white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="Nl.SectionTitle" parent="">
+        <item name="android:textColor">@color/nl_white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="Nl.Subtitle" parent="">
+        <item name="android:textColor">@color/nl_lavender</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="Nl.Body" parent="">
+        <item name="android:textColor">@color/nl_white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="Nl.BodyBold" parent="Nl.Body">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Nl.Caption" parent="">
+        <item name="android:textColor">@color/nl_lavender</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Nl.Price" parent="">
+        <item name="android:textColor">@color/nl_green</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Nl.Badge" parent="">
+        <item name="android:textColor">@color/nl_green</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <!-- Button Components (Fitts's Law min 48dp+ height & touch feedback) -->
+    <style name="Nl.Button.Primary" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:background">@drawable/bg_button_primary</item>
+        <item name="android:textColor">@color/nl_black</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="Nl.Button.Secondary" parent="Nl.Button.Primary">
+        <item name="android:background">@drawable/bg_button_secondary</item>
+        <item name="android:textColor">@color/nl_white</item>
+    </style>
+
+    <style name="Nl.Button.Light" parent="Nl.Button.Primary">
+        <item name="android:background">@drawable/bg_button_light</item>
+        <item name="android:textColor">@color/nl_black</item>
+    </style>
+
+    <style name="Nl.Button.Outlined" parent="Nl.Button.Primary">
+        <item name="android:background">@drawable/bg_card_outline</item>
+        <item name="android:textColor">@color/nl_white</item>
+    </style>
+
+    <!-- Input Form Fields (Hick's Law & Touch targets) -->
+    <style name="Nl.Input" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textColor">@color/nl_white</item>
+        <item name="android:textColorHint">@color/nl_hint</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.Corner8dp" parent="">
+        <item name="cornerSize">8dp</item>
+    </style>
+
+</resources>

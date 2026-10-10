@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nl_bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <!-- Top Profile Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_avatar"
+                    android:contentDescription="User Profile Avatar"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_person"
+                    app:tint="@color/nl_white" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvGreeting"
+                        style="@style/Nl.BodyBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hello, Gamer!"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        style="@style/Nl.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Level 12 • Gold member"
+                        android:textColor="@color/nl_gold"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Nl.BodyBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1,250 XP"
+                        android:textColor="@color/nl_green"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        style="@style/Nl.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="250 to Level 13"
+                        android:textColor="@color/nl_lavender"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Featured FC 27 Tournament Card -->
+            <LinearLayout
+                android:id="@+id/bannerTournament"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_fc27_card"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_rounded"
+                android:orientation="vertical">
+
+                <!-- FC 27 Banner Image Container with Floating LIVE Badge -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp">
+
+                    <ImageView
+                        android:id="@+id/imgFc27Banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="FC 27 Esports Tournament Artwork"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/fc_27" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/bg_live_pink"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            style="@style/Nl.BodyBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="• LIVE"
+                            android:textColor="@color/nl_white"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- Tournament Content Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        style="@style/Nl.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Prize pool"
+                        android:textColor="@color/nl_grey_caption"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvPrizePool"
+                        style="@style/Nl.Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="R10,000"
+                        android:textColor="@color/nl_green"
+                        android:textSize="32sp" />
+
+                    <TextView
+                        style="@style/Nl.SectionTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="FC 27 Esports Tournament"
+                        android:textSize="18sp" />
+
+                    <!-- Progress bar & Spots left -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressTournament"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="12dp"
+                            android:layout_toStartOf="@+id/tvSpotsLeft"
+                            android:max="100"
+                            android:progress="40"
+                            android:progressBackgroundTint="@color/nl_track_purple"
+                            android:progressTint="@color/nl_live_pink" />
+
+                        <TextView
+                            android:id="@+id/tvSpotsLeft"
+                            style="@style/Nl.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="18 spots left"
+                            android:textColor="@color/nl_grey_caption"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnRegisterTournament"
+                        style="@style/Nl.Button.Primary"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Register now"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Next Session Card -->
+            <LinearLayout
+                android:id="@+id/cardNextSession"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_next_session"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_rounded"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Nl.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Next session"
+                            android:textColor="@color/nl_grey_caption"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            style="@style/Nl.BodyBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Sat 10 Oct · 14:00"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btnManageSession"
+                        style="@style/Nl.Body"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:text="Manage ❯"
+                        android:textColor="@color/nl_lavender"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/Nl.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Squad VIP lounge · 6 players"
+                    android:textColor="@color/nl_lavender"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- "Book your arena" Section Header -->
+            <TextView
+                style="@style/Nl.SectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Book your arena"
+                android:textSize="18sp" />
+
+            <!-- Book Your Arena 2-Column Grid -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <!-- Left Column: Casual & Solo Tall Card -->
+                <LinearLayout
+                    android:id="@+id/btnCasualSolo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_arena_casual"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/ripple_rounded"
+                    android:minHeight="190dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_gamepad"
+                            app:tint="@color/nl_green" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignParentEnd="true"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_check"
+                            app:tint="@color/nl_green" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        style="@style/Nl.BodyBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Casual and solo"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        style="@style/Nl.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="RTX 4080 PCs, PS5 booths, sim racing"
+                        android:textColor="@color/nl_lavender"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Right Column: Stacked Groups & Schools Cards -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- Top Card: Groups and Parties -->
+                    <LinearLayout
+                        android:id="@+id/btnGroupsParties"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_arena_groups"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="@drawable/ripple_rounded"
+                        android:minHeight="90dp"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/ic_nav_packages"
+                                app:tint="@color/nl_lavender" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_alignParentEnd="true"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/ic_check"
+                                app:tint="@color/nl_lavender" />
+                        </RelativeLayout>
+
+                        <TextView
+                            style="@style/Nl.BodyBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Groups and parties"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- Bottom Card: Schools and Corporate -->
+                    <LinearLayout
+                        android:id="@+id/btnSchoolsCorporate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_arena_schools"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="@drawable/ripple_rounded"
+                        android:minHeight="90dp"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/ic_trophy"
+                                app:tint="@color/nl_gold" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_alignParentEnd="true"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/ic_check"
+                                app:tint="@color/nl_gold" />
+                        </RelativeLayout>
+
+                        <TextView
+                            style="@style/Nl.BodyBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Schools and corporate"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

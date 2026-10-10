@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nl_bg_dark"
+    android:elevation="12dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Nav Home -->
+        <LinearLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/iconNavHome"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="Home"
+                android:src="@drawable/ic_nav_home"
+                app:tint="@color/nl_green" />
+
+            <TextView
+                android:id="@+id/textNavHome"
+                style="@style/Nl.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Home"
+                android:textColor="@color/nl_green"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Nav Packages -->
+        <LinearLayout
+            android:id="@+id/navPackages"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/iconNavPackages"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="Packages"
+                android:src="@drawable/ic_nav_packages"
+                app:tint="@color/nl_lavender" />
+
+            <TextView
+                android:id="@+id/textNavPackages"
+                style="@style/Nl.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Packages"
+                android:textColor="@color/nl_lavender"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Nav Bookings -->
+        <LinearLayout
+            android:id="@+id/navBookings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/iconNavBookings"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="Bookings"
+                android:src="@drawable/ic_nav_bookings"
+                app:tint="@color/nl_lavender" />
+
+            <TextView
+                android:id="@+id/textNavBookings"
+                style="@style/Nl.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Bookings"
+                android:textColor="@color/nl_lavender"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Nav Quote -->
+        <LinearLayout
+            android:id="@+id/navQuote"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/iconNavQuote"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="Quote"
+                android:src="@drawable/ic_nav_quote"
+                app:tint="@color/nl_lavender" />
+
+            <TextView
+                android:id="@+id/textNavQuote"
+                style="@style/Nl.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Quote"
+                android:textColor="@color/nl_lavender"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="75dp"
+    android:viewportWidth="240"
+    android:viewportHeight="90">
+
+    <!-- Shape 1: Power 'O' -->
+    <!-- Dark Purple Ring -->
+    <path
+        android:fillColor="#2D1B69"
+        android:fillType="evenOdd"
+        android:pathData="M 45,15
+                  A 30,30 0 1,0 45,75
+                  A 30,30 0 1,0 45,15 Z
+                  M 45,28
+                  A 17,17 0 1,1 45,62
+                  A 17,17 0 1,1 45,28 Z" />
+
+    <!-- Bright Green Vertical Bar -->
+    <path
+        android:fillColor="#6FE821"
+        android:pathData="M 40,8 C 40,5.8 41.8,4 44,4 L 46,4 C 48.2,4 50,5.8 50,8 L 50,42 C 50,44.2 48.2,46 46,46 L 44,46 C 41.8,46 40,44.2 40,42 Z" />
+
+    <!-- Shape 2: Cross 'X' (Lavender) -->
+    <path
+        android:strokeColor="#8C7FF0"
+        android:strokeWidth="13"
+        android:strokeLineCap="round"
+        android:pathData="M 100,23 L 140,67 M 100,67 L 140,23" />
+
+    <!-- Shape 3: Triangle '△' (Dark Purple) -->
+    <path
+        android:fillColor="#2D1B69"
+        android:strokeColor="#2D1B69"
+        android:strokeWidth="4"
+        android:strokeLineJoin="round"
+        android:pathData="M 195,17 L 225,69 L 165,69 Z" />
+
+</vector>

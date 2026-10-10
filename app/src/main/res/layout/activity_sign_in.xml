@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nl_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/screen_padding">
+
+    <!-- Header Branding -->
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:contentDescription="Next Level Esports Logo"
+        android:src="@drawable/ic_gamepad"
+        app:tint="@color/nl_green" />
+
+    <TextView
+        style="@style/Nl.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="WELCOME BACK"
+        android:textSize="22sp" />
+
+    <TextView
+        style="@style/Nl.Subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Sign in to access your gamer pass, ranks &amp; bookings" />
+
+    <!-- Form Container Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_panel_purple"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Email Label & Field -->
+        <TextView
+            style="@style/Nl.BodyBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:textColor="@color/nl_white"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            style="@style/Nl.Input"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_email"
+            android:hint="name@example.com"
+            android:importantForAutofill="yes"
+            android:inputType="textEmailAddress" />
+
+        <!-- Password Label & Field -->
+        <TextView
+            style="@style/Nl.BodyBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Password"
+            android:textColor="@color/nl_white"
+            android:textSize="13sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/etPassword"
+                style="@style/Nl.Input"
+                android:drawableStart="@drawable/ic_lock"
+                android:hint="Enter your password"
+                android:importantForAutofill="yes"
+                android:inputType="textPassword"
+                android:paddingEnd="48dp" />
+
+            <ImageView
+                android:id="@+id/btnTogglePassword"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="Toggle password visibility"
+                android:focusable="true"
+                android:padding="12dp"
+                android:src="@drawable/ic_visibility"
+                app:tint="@color/nl_lavender" />
+        </RelativeLayout>
+
+        <!-- Forgot Password -->
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            style="@style/Nl.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="Forgot Password?"
+            android:textColor="@color/nl_lavender"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Sign In Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignIn"
+        style="@style/Nl.Button.Primary"
+        android:layout_marginBottom="12dp"
+        android:text="SIGN IN" />
+
+    <!-- Sign Up Redirect -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/Nl.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? " />
+
+        <TextView
+            android:id="@+id/tvSignUp"
+            style="@style/Nl.BodyBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Sign Up"
+            android:textColor="@color/nl_green" />
+    </LinearLayout>
+
+</LinearLayout>
